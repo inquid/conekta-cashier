@@ -3,7 +3,6 @@
 namespace Dinkbit\ConektaCashier;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Config;
 
 trait Billable
 {
@@ -460,7 +459,7 @@ trait Billable
      */
     public static function getConektaKey()
     {
-        return static::$conektaKey ?: Config::get('services.conekta.secret');
+        return static::$conektaKey ?: Yii::$app->params['services.conekta.secret'];
     }
 
     /**
