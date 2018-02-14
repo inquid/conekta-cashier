@@ -22,7 +22,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "conekta/conekta-php": "~2.0.4",
+        "conekta/conekta-php": "4.0.1",
         "nesbot/carbon": "~1.0",
         "symfony/http-kernel": "~2.6|~3.0"
     },
