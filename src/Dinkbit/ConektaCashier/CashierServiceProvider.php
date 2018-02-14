@@ -2,9 +2,9 @@
 
 namespace Dinkbit\ConektaCashier;
 
-use Illuminate\Support\ServiceProvider;
+use yii\base\Component;
 
-class CashierServiceProvider extends ServiceProvider
+class CashierServiceProvider extends Component
 {
     /**
      * Bootstrap the application events.
@@ -18,7 +18,7 @@ class CashierServiceProvider extends ServiceProvider
 
     /**
      * Register the service provider.
-     *
+     * TODO UPDATE THIS TO YII
      * @return void
      */
     public function register()
