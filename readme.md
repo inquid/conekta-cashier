@@ -1,4 +1,4 @@
-# Laravel Conekta Cashier
+# Yii2 Conekta Cashier
 
 [![Build Status](https://img.shields.io/travis/dinkbit/conekta-cashier.svg?style=flat-square)](https://travis-ci.org/dinkbit/conekta-cashier)
 [![StyleCI](https://styleci.io/repos/22849643/shield)](https://styleci.io/repos/22849643)
@@ -11,7 +11,7 @@ Please note the latest version of Laravel Cashier supports Laravel 5+, if you ar
 
 ___
 
-# Laravel Cashier
+# Yii2 Cashier
 
 - [Introduction](#introduction)
 - [Configuration](#configuration)
@@ -27,7 +27,7 @@ ___
 <a name="introduction"></a>
 ## Introduction
 
-Laravel Cashier provides an expressive, fluent interface to [Conekta's](https://conekta.com) subscription billing services. It handles almost all of the boilerplate subscription billing code you are dreading writing. In addition to basic subscription management, Cashier can handle coupons, swapping subscription, subscription "quantities", cancellation grace periods, and even generate invoice PDFs.
+Yii2 Cashier provides an expressive, fluent interface to [Conekta's](https://conekta.com) subscription billing services. It handles almost all of the boilerplate subscription billing code you are dreading writing. In addition to basic subscription management, Cashier can handle coupons, swapping subscription, subscription "quantities", cancellation grace periods, and even generate invoice PDFs.
 
 <a name="configuration"></a>
 ## Configuration
@@ -36,7 +36,7 @@ Laravel Cashier provides an expressive, fluent interface to [Conekta's](https://
 
 First, add the Cashier package to your `composer.json` file:
 
-	"dinkbit/conekta-cashier": "~2.0" (For Conekta 1.0.0 PHP-SDK 2.0)
+	"dinkbit/conekta-cashier": "~4.0" (For Conekta 1.0.0 PHP-SDK 2.0)
 
 #### Service Provider
 
