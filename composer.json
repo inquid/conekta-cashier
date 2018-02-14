@@ -1,7 +1,7 @@
 {
-    "name": "dinkbit/conekta-cashier",
-    "description": "Dinkbit Cashier nos da una interface para cobrar subscripciones con Conketa en Laravel.",
-    "keywords": ["dinkbit", "conekta", "laravel", "billing"],
+    "name": "inquid/yii2-conekta-cashier",
+    "description": "Dinkbit/Inquid Cashier nos da una interface para cobrar subscripciones con Conketa en Yii2.",
+    "keywords": ["dinkbit","inquid", "conekta", "laravel", "billing"],
     "license": "MIT",
     "authors": [
         {
@@ -23,14 +23,10 @@
     "require": {
         "php": ">=5.4.0",
         "conekta/conekta-php": "~2.0.4",
-        "illuminate/filesystem": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-        "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
         "nesbot/carbon": "~1.0",
         "symfony/http-kernel": "~2.6|~3.0"
     },
     "require-dev": {
-        "illuminate/routing": "~5.0",
-        "illuminate/view": "~5.0",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "4.0.*"
     },
