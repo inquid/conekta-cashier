@@ -1,7 +1,7 @@
 <?php
 
 namespace Dinkbit\ConektaCashier;
-
+use Yii;
 use Carbon\Carbon;
 
 trait Billable

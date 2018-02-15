@@ -2,9 +2,8 @@
 
 namespace Dinkbit\ConektaCashier;
 
-use Conekta_Customer;
 
-class Customer extends Conekta_Customer
+class Customer extends \Conekta\Customer
 {
     /**
      * The subscription being managed by Conekta Cashier.
@@ -54,6 +53,7 @@ class Customer extends Conekta_Customer
      */
     protected function _createSubscription(array $params)
     {
+        file_put_contents('koko',json_encode($params));
         return $this->subscription = $this->createSubscription($params);
     }
 

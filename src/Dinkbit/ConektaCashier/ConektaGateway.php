@@ -2,6 +2,8 @@
 
 namespace Dinkbit\ConektaCashier;
 
+
+
 use Carbon\Carbon;
 use Conekta;
 use Conekta_Charge;
@@ -53,7 +55,7 @@ class ConektaGateway
         $this->plan = $plan;
         $this->billable = $billable;
 
-        Conekta::setApiKey($billable->getConektaKey());
+        \Conekta\Conekta::setApiKey($billable->getConektaKey());
     }
 
     /**
@@ -241,7 +243,7 @@ class ConektaGateway
     /**
      * Get the subscription end timestamp for the customer.
      *
-     * @param \Conekta_Customer $customer
+     * @param Conekta\Customer $customer
      *
      * @return int
      */
@@ -310,7 +312,7 @@ class ConektaGateway
     /**
      * Update the local Conekta data in storage.
      *
-     * @param \Conekta_Customer $customer
+     * @param Conekta\Customer $customer
      * @param string|null       $plan
      *
      * @return void
@@ -333,12 +335,12 @@ class ConektaGateway
      * @param string $token
      * @param array  $properties
      *
-     * @return \Conekta_Customer
+     * @return Conekta\Customer
      */
     public function createConektaCustomer($token, array $properties = [])
     {
-        $customer = Conekta_Customer::create(
-            array_merge(['cards' => [$token]], $properties), $this->getConektaKey()
+        $customer = Conekta\Customer::create(
+            array_merge(['cards' => [$token]], ['name'=>'Luis González','email'=>'luisarmando1234@gmail.com']), $this->getConektaKey()
         );
 
         return $this->getConektaCustomer($customer->id);
@@ -347,7 +349,7 @@ class ConektaGateway
     /**
      * Get the Conekta customer for entity.
      *
-     * @return \Conekta_Customer
+     * @return Conekta\Customer
      */
     public function getConektaCustomer($id = null)
     {
@@ -359,7 +361,7 @@ class ConektaGateway
     /**
      * Get the last four credit card digits for a customer.
      *
-     * @param \Conekta_Customer $customer
+     * @param Conekta\Customer $customer
      *
      * @return string
      */
@@ -385,7 +387,7 @@ class ConektaGateway
     /**
      * Get the last four credit card digits for a customer.
      *
-     * @param \Conekta_Customer $customer
+     * @param Conekta\Customer $customer
      *
      * @return string
      */
