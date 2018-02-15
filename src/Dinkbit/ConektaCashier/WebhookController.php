@@ -5,11 +5,8 @@ namespace Dinkbit\ConektaCashier;
 use Conekta;
 use Conekta_Event;
 use Exception;
-use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Request;
 use Symfony\Component\HttpFoundation\Response;
+use yii\web\Controller;
 
 class WebhookController extends Controller
 {
@@ -45,7 +42,7 @@ class WebhookController extends Controller
     protected function eventExistsOnConekta($id)
     {
         try {
-            Conekta::setApiKey(Config::get('services.conekta.secret'));
+            Conekta::setApiKey(\Yii::$app->params['services.conekta.secret']);
 
             return !is_null(Conekta_Event::where(['id' => $id]));
         } catch (Exception $e) {

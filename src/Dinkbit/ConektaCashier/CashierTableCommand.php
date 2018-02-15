@@ -2,7 +2,6 @@
 
 namespace Dinkbit\ConektaCashier;
 
-use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 
 class CashierTableCommand extends Command

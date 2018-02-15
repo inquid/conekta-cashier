@@ -3,7 +3,6 @@
 namespace Dinkbit\ConektaCashier;
 
 use Dinkbit\ConektaCashier\Contracts\Billable as BillableContract;
-use Illuminate\Support\Facades\Config;
 
 class EloquentBillableRepository implements BillableRepositoryInterface
 {
@@ -16,7 +15,7 @@ class EloquentBillableRepository implements BillableRepositoryInterface
      */
     public function find($conektaId)
     {
-        $model = $this->createCashierModel(Config::get('services.conekta.model'));
+        $model = $this->createCashierModel(\Yii::$app->params['services.conekta.model']);
 
         return $model->where($model->getConektaIdName(), $conektaId)->first();
     }
